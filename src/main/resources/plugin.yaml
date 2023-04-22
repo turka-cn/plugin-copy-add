@@ -1,0 +1,21 @@
+apiVersion: plugin.halo.run/v1alpha1
+kind: Plugin
+
+metadata:
+    name: copy-add
+
+spec:
+    enabled: true
+    version: 1.0.3
+    requires: ">=2.0.0"
+    settingName: copy-add-setting
+    configMapName: copy-add-setting
+    author:
+        name: 小猫涂卡
+        website: https://turka.cn
+    logo: logo.png
+    homepage: https://github.com/turka-cn/plugin-copyadd
+    displayName: "复制追加"
+    description: "在站点复制文本的时候自动追加一段内容，比如说版权提示"
+    license:
+        - name: "MIT"

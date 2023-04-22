@@ -1,0 +1,28 @@
+apiVersion: v1alpha1
+kind: Setting
+
+metadata:
+    name: copy-add-setting
+
+spec:
+    forms:
+        -   group: basic
+            label: "附加设置"
+            formSchema:
+            -   $formkit: textarea
+                name: copyAddContent
+                label: "附加内容"
+                value: "嘿！我是你添加进来的”复制追加“插件！"
+                help: "站点内复制的文本的末尾将会添加以上内容"
+            -   $formkit: select
+                name: divideType
+                label: "分割类型"
+                value: space
+                help: "复制文本与附加内容的分开方式"
+                options:
+                    -   label: "空格"
+                        value: space
+                    -   label: "横线 ---"
+                        value: line
+                    -   label: "空行"
+                        value: emptyLine
