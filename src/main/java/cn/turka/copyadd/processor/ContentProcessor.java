@@ -9,7 +9,7 @@ package cn.turka.copyadd.processor;
 
 public class ContentProcessor {
 
-    public String springProcess(String copyAddContent, String divideType) {
+    public String scriptProcess(String copyAddContent, String divideType, String copyMinLength) {
 
         String processContent = switch (divideType) {
             case "line" -> "\\n---\\n" + copyAddContent;
@@ -21,19 +21,28 @@ public class ContentProcessor {
 
         return """
             <script>
+                function contentParse(content) {
+                    let parsed = content
+                    
+                    parsed = parsed.replaceAll("#url", window.location.href)
+                    parsed = parsed.replaceAll("#site", window.location.host)
+                    
+                    return parsed
+                }
+                
                 document.addEventListener("copy", (event) => {
                     let clipboard = event.clipboardData || window.clipboardData
                     let clipboardText = window.getSelection().toString()
                     
-                    if (!clipboard) {
+                    if (!clipboard || clipboardText.length <= %s) {
                         return
                     }
                     else if (clipboardText !== "") {
                         event.preventDefault()
-                        clipboard.setData("text/plain", clipboardText + "%s")
+                        clipboard.setData("text/plain", clipboardText + contentParse("%s"))
                     }
-                });
+                })
             </script>
-            """.formatted(processContent);
+            """.formatted(copyMinLength, processContent);
     }
 }

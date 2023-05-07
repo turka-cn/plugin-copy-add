@@ -40,9 +40,10 @@ public class InjectProcessor implements TemplateHeadProcessor {
 
                 final IModelFactory modelFactory = context.getModelFactory();
 
-                final CharSequence scriptText = contentProcessor.springProcess(
+                final CharSequence scriptText = contentProcessor.scriptProcess(
                     config.getCopyAddContent(),
-                    config.getDivideType());
+                    config.getDivideType(),
+                    config.getCopyMinLength());
 
                 model.add(modelFactory.createText(scriptText));
 

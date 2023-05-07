@@ -12,8 +12,8 @@ spec:
             -   $formkit: textarea
                 name: copyAddContent
                 label: "附加内容"
-                value: "嘿！我是你添加进来的”复制追加“插件！"
-                help: "站点内复制的文本的末尾将会添加以上内容"
+                value: "嘿！我是你添加进来的【复制追加】插件！内容来源：#url"
+                help: "站点内复制的文本的末尾将会添加以上内容，支持占位符：#url 当前页面url、#site 站点域名"
             -   $formkit: select
                 name: divideType
                 label: "分割类型"
@@ -26,3 +26,8 @@ spec:
                         value: line
                     -   label: "空行"
                         value: emptyLine
+            -   $formkit: number
+                name: copyMinLength
+                label: "免除追加字数"
+                value: 5
+                help: "复制文本字数少于（含）“免除追加字数”将不会添加内容，若小于（含）0则对所有复制文本添加内容"

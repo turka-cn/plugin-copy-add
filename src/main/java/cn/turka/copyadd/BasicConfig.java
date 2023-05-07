@@ -12,4 +12,6 @@ public class BasicConfig {
     String copyAddContent;
 
     String divideType;
+
+    String copyMinLength;
 }
