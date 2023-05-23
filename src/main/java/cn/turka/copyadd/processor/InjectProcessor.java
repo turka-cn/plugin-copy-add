@@ -34,11 +34,9 @@ public class InjectProcessor implements TemplateHeadProcessor {
 
         BasicConfig basicConfig = pluginConfigFetcher.fetch();
 
-        ContentProcessor contentProcessor = new ContentProcessor();
-
         final IModelFactory modelFactory = context.getModelFactory();
 
-        final CharSequence scriptText = contentProcessor.scriptProcess(
+        final CharSequence scriptText = ContentProcessor.scriptProcess(
             basicConfig.getCopyAddContent(),
             basicConfig.getDivideType(),
             basicConfig.getCopyMinLength());

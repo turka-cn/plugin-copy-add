@@ -9,7 +9,7 @@ package cn.turka.copyadd.processor;
 
 public class ContentProcessor {
 
-    public String scriptProcess(String copyAddContent, String divideType, String copyMinLength) {
+    public static String scriptProcess(String copyAddContent, String divideType, String copyMinLength) {
 
         String processContent = switch (divideType) {
             case "line" -> "\\n---\\n" + copyAddContent;
