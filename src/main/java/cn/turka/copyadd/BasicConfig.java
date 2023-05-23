@@ -1,6 +1,7 @@
 package cn.turka.copyadd;
 
 import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Turka
@@ -8,6 +9,7 @@ import lombok.Data;
  */
 
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class BasicConfig {
     String copyAddContent;
 
