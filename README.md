@@ -1,7 +1,7 @@
 <h1 align="center">plugin-copy-add</h1>
 
 <p align="center">
-    <img src="https://shields.io/badge/Ver-1.0.2-59b7ff?style=for-the-badge" alt="version" />
+    <img src="https://img.shields.io/badge/dynamic/yaml?color=59b7ff&style=for-the-badge&label=Version&query=$.spec.version&url=https://raw.githubusercontent.com/turka-cn/plugin-copy-add/master/src/main/resources/plugin.yaml" alt="version" />
     <img src="https://shields.io/badge/Halo-2.x+-59b7ff?style=for-the-badge" alt="halo" />
     <img src="https://shields.io/badge/License-MIT-green?style=for-the-badge" alt="license" />
 </p>
@@ -10,7 +10,9 @@
 
 ### 目前功能
 
-支持三种分割模式：**空格、横线（---）和空行**
+- ✨ 支持三种分割模式：**空格、横线（---）和空行**
+- ✨ 支持占位符
+- ✨ 可设置免除字数
 
 ### 使用和设置方法
 
@@ -20,6 +22,13 @@
 - Ⅳ、**记得点`保存`，不然是不生效的！**
 
 <img src="https://upload-cdn.turka.cn/turka-cn-data/1682340539465.png"/>
+
+### 目前支持的占位符
+
+占位符|作用
+---|---
+#url|当前页面的url，如https://foo.cn/archives/foo-bar
+#site|站点域名，如foo.cn
 
 ### 如何开发？
 
