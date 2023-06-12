@@ -8,6 +8,7 @@ import org.thymeleaf.model.IModel;
 import org.thymeleaf.processor.element.IElementModelStructureHandler;
 import org.thymeleaf.model.IModelFactory;
 
+import cn.turka.copyadd.Util;
 import cn.turka.copyadd.BasicConfig;
 import cn.turka.copyadd.fetcher.PluginConfigFetcher;
 
@@ -33,6 +34,10 @@ public class InjectProcessor implements TemplateHeadProcessor {
                               IElementModelStructureHandler handler) {
 
         BasicConfig basicConfig = pluginConfigFetcher.fetch();
+
+        if (basicConfig.getContentPageOnly() && !Util.isContentPage(context)) {
+            return Mono.empty();
+        }
 
         final IModelFactory modelFactory = context.getModelFactory();
 

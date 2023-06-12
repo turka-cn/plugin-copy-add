@@ -16,4 +16,6 @@ public class BasicConfig {
     String divideType;
 
     String copyMinLength;
+
+    Boolean contentPageOnly;
 }

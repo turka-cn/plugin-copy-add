@@ -31,3 +31,8 @@ spec:
                 label: "免除追加字数"
                 value: 5
                 help: "复制文本字数少于（含）“免除追加字数”将不会添加内容，若小于（含）0则对所有复制文本添加内容"
+            -   $formkit: checkbox
+                name: contentPageOnly
+                label: "仅文章详情、独立页面有效"
+                value: true
+                help: "除文章详情、独立页面以外的页面复制文本将不会添加内容"
