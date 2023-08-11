@@ -6,7 +6,7 @@
     <img src="https://shields.io/badge/License-MIT-green?style=for-the-badge" alt="license" />
 </p>
 
-适用于Halo2.x的复制追加插件，可在站点复制文本的时候自动追加一段内容，比如说版权提示
+适用于 Halo2.x 全系列的复制追加插件，可在站点复制文本的时候自动追加一段内容，比如说版权提示
 
 ### 目前功能
 
@@ -22,7 +22,7 @@
 - Ⅲ、在插件信息内有个`附加设置`选项卡，点进去就能设置内容啦
 - Ⅳ、**记得点`保存`，不然是不生效的！**
 
-<img src="https://upload-cdn.turka.cn/turka-cn-data/1682340539465.png"/>
+<img src="https://upload-cdn.turka.cn/picture/copyadd-intro-1.png"/>
 
 ### 目前支持的占位符
 
